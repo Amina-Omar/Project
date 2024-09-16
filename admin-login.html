@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login - E-CHAMA</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Combined stylesheet reference -->
     <link rel="stylesheet" href="admin-styles.css"> <!-- Keep this if it has unique styles -->
 </head>
 <body>
@@ -26,15 +25,17 @@
     <div class="login-container">
         <h2>Admin Login</h2>
         <form action="admin-dashboard.html" method="POST">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit" class="login-btn">Login</button>
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Enter your username" autocomplete="username">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password">
+                </div>
+                <button class="login-btn" type="submit">Login</button>
+            </form>
         </form>
     </div>
     <footer>
