@@ -1,0 +1,143 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Header Styles */
+header {
+    background-color: #0047AB; /* Blue */
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav-button {
+    background-color: #28A745; /* Green */
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #218838;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    display: none;
+    background-color: #0047AB;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.nav-menu a:hover {
+    background-color: #218838;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.welcome-section h2 {
+    font-size: 36px;
+    color: #0047AB;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.signup-btn {
+    background-color: #28A745; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #218838;
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.login-link a {
+    color: #0047AB;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #0047AB;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Style for red-colored heart with animation */
+footer p .heart {
+    color: red;
+    font-size: 18px;
+    display: inline-block;
+    animation: heartbeat 1s infinite; /* Apply heartbeat animation */
+}
+
+/* Keyframes for heart pulsing effect */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+}
