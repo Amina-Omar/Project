@@ -81,16 +81,16 @@ Home Page
 ## Screenshots
 
 ### Login Page
-![Screenshot of login page](/Screenshot_20240919-140523.png)
+![Screenshot of login page](assets/Screenshot_20240919-140523.png)
 ### Dashboard
-![Screenshot of dashbord](/Screenshot_20240919-140504.png)
+![Screenshot of dashbord](assets/Screenshot_20240919-140504.png)
 ### Admin Login
-![Screenshot of admin login](/Screenshot_20240919-140603.png)
+![Screenshot of admin login](assets/Screenshot_20240919-140603.png)
 
 ### User Registration
-![Screenshot of user registration](/Screenshot_20240919-140534.png)
+![Screenshot of user registration](assets/Screenshot_20240919-140534.png)
 ### contact
-![Screenshot of contact](/Screenshot_20240919-140713.png)
+![Screenshot of contact](assets/Screenshot_20240919-140713.png)
 Contributing
 If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
 
