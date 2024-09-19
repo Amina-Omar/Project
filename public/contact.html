@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - E-CHAMA</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include the merged CSS -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="E-CHAMA Logo">
+            <h1>E-CHAMA</h1>
+        </div>
+        <button class="nav-button" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰ Menu</button>
+        <nav id="navMenu" class="nav-menu" aria-label="Main navigation menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin-login.html">Admin Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>If you have any questions or need further information, feel free to reach out to us using the contact form below or the contact details provided.</p>
+                
+                <div class="contact-details">
+                    <h4>Our Address</h4>
+                    <p>123 E-CHAMA Lane, Malindi, Kenya</p>
+                    
+                    <h4>Phone</h4>
+                    <p>+254 758189216</p>
+                    
+                    <h4>Email</h4>
+                    <p>contact@echama.com</p>
+                </div>
+
+                <div class="map">
+                    <h4>Find Us</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6582.730309730842!2d40.13756361537575!3d-3.2213592428653406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178aa8b8c1c388c7%3A0x224e20dd376e7262!2sMalindi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1639012368475!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="/api/contact" method="POST">
+
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="login-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with <span class="heart">❤</span> by Amina Omar | &copy; 2024 E-CHAMA Management System</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

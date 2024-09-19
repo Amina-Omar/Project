@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-CHAMA Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="E-CHAMA Logo">
+            <h1>E-CHAMA</h1>
+        </div>
+        <button class="nav-button" onclick="toggleMenu()">☰ Menu</button>
+        <nav id="navMenu" class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin-login.html">Admin Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <a href="#users">Users</a>
+            <a href="#loans">Loans</a>
+        </nav>
+        <div class="user-icon" onclick="toggleUserDetails()">👤</div>
+    </header>
+
+    <main>
+        <section id="users">
+            <h2>Users</h2>
+            <button id="add-user" onclick="toggleSignupForm()">Add User</button>
+            <table class="user-list">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Savings (Ksh)</th>
+                        <th>Loans</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="user-table-body">
+                    <!-- User rows will be populated here -->
+                </tbody>
+            </table>
+
+            <div class="user-details" id="user-details" style="display:none;">
+                <h2>User Details</h2>
+                <div id="user-info"></div>
+                <button onclick="generateUserStatement()">Generate User Statement</button>
+            </div>
+        </section>
+
+        <section id="loans">
+            <h2>Loans</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Loan ID</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="loan-list">
+                    <!-- Loan rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Signup Form -->
+        <div class="signup-container" id="signup-form" style="display: none;">
+            <h2>Add User</h2>
+            <form action="/submit_signup" method="post">
+                <div class="input-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required autocomplete="given-name">
+                </div>
+                <div class="input-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required autocomplete="family-name">
+                </div>
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="new-password">
+                </div>
+                <button type="submit">Submit</button>
+                <button type="button" id="close-signup" onclick="hideSignupForm()">Cancel</button>
+            </form>
+        </div>
+
+        <div class="sacco-statements" id="sacco-statements" style="display:none;">
+            <h2>SACCO Statements</h2>
+            <div id="sacco-info"></div>
+            <button onclick="downloadSaccoStatements()">Download Statements</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with <span class="heart">❤</span> by Amina Omar | &copy; 2024 E-CHAMA Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

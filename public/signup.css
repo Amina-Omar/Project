@@ -1,0 +1,207 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #0047AB;
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-button {
+    background-color: #28A745;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    right: 1in; /* Position menu button 1 inch from the right */
+}
+
+.nav-button:hover {
+    background-color: #218838;
+    transform: translateX(-10px);
+}
+
+.nav-menu {
+    display: none;
+    background-color: #0047AB;
+    position: absolute;
+    top: 60px;
+    right: 1in;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.nav-menu a:hover {
+    background-color: #218838;
+}
+
+/* Signup Form Container */
+.signup-container {
+    max-width: 400px;
+    margin: 120px auto; /* Push form below the header */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out; /* Form animation */
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Signup Button */
+.signup-btn {
+    background-color: #28A745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.signup-btn:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #0047AB;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Style for red-colored heart with animation */
+footer p .heart {
+    color: red;
+    font-size: 18px;
+    display: inline-block;
+    animation: heartbeat 1s infinite;
+}
+
+/* Animation for heart pulsing effect */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+}
+
+/* Animation for Form Visibility */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .signup-container {
+        width: 90%;
+        margin: 100px auto;
+    }
+    
+    .nav-button {
+        right: 0.5in;
+    }
+
+    .nav-menu {
+        right: 0.5in;
+    }
+}
+
+@media (max-width: 400px) {
+    .signup-container {
+        width: 100%;
+        margin: 100px auto;
+    }
+
+    .nav-button {
+        right: 0;
+    }
+
+    .nav-menu {
+        right: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - E-CHAMA</title>
+    <link rel="stylesheet" href="admin-styles.css"> <!-- Keep this if it has unique styles -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="E-CHAMA Logo">
+            <h1>E-CHAMA</h1>
+        </div>
+        <button class="nav-button" aria-label="Toggle navigation menu" onclick="toggleMenu()">☰ Menu</button>
+        <nav id="navMenu" class="nav-menu" aria-label="Main navigation menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admin-login.html">Admin Login</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>   
+
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form action="/api/admin/login" method="POST" class="login-form">
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username"  required placeholder=" Enter username" autocomplete="username">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required  placeholder="Enter your password" autocomplete="current-password">
+                </div>
+                <button class="login-btn" type="submit">Login</button>
+            </form>
+        </form>
+    </div>
+    <footer>
+        <p>Made with <span class="heart">❤</span> by Amina Omar | &copy; 2024 E-CHAMA Management System</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

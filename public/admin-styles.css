@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack header, main content, and footer vertically */
+    min-height: 100vh; /* Ensure body is at least the height of the viewport */
+}
+
+/* Header Styles */
+header {
+    background-color: #0047AB; /* Blue */
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 60px; /* Set header height */
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Navigation Button */
+.nav-button {
+    background-color: #28A745; /* Green */
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Navigation Button Hover Effect */
+.nav-button:hover {
+    background-color: #218838;
+    transform: translateX(-10px); /* Move the button slightly on hover */
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    display: none;
+    background-color: #0047AB;
+    position: absolute;
+    top: 60px; /* Adjusted for fixed header */
+    right: 3in; /* 3 inches from the right */
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+/* Navigation Menu List */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation Menu Links */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Navigation Menu Link Hover Effect */
+.nav-menu a:hover {
+    background-color: #218838;
+}
+
+/* Container for the Login Form */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin: 80px auto 20px auto; /* Ensure enough space for header */
+    margin-top: calc(60px + 20px); /* Add top margin to account for header height and some extra space */
+    animation: slideIn 0.5s ease-out; /* Add animation */
+}
+
+/* Header for Login Container */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #0047AB;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+/* Labels */
+.input-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Inputs with Animation */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus and Hover Effects */
+.input-group input:focus, .input-group input:hover {
+    outline: none;
+    border-color: #28A745; /* Green */
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5); /* Green glow */
+    background-color: #e9f7ef; /* Light green background */
+}
+
+/* Bounce Animation for Input Fields */
+.input-group input:focus {
+    animation: bounce 0.4s ease;
+}
+
+/* Keyframes for Bounce Effect */
+@keyframes bounce {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.05); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #FF7F50; /* Coral */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Login Button */
+.login-btn:hover {
+    background-color: #FF6347; /* Tomato */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+        margin-top: calc(60px + 20px); /* Adjust margin for smaller screens */
+    }
+
+    .nav-menu {
+        width: 100%;
+        right: 0; /* Full width on small screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #0047AB;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Push footer to the bottom */
+    box-sizing: border-box; /* Ensure padding is included in total height */
+}
+
+/* Heartbeat Animation */
+footer p .heart {
+    color: red;
+    font-size: 18px;
+    display: inline-block;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+}
+
+/* Animation for Login Container */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
