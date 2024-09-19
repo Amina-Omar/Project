@@ -81,7 +81,7 @@ Home Page
 ## Screenshots
 
 ### Login Page
-![Screenshot of login page](public\assets\Screenshot_20240919-140523.png)
+![Screenshot of login page](project/public/assets/Screenshot_20240919-140523.png)
 ### Dashboard
 ![Screenshot of dashbord](public\assets\Screenshot_20240919-140504.png)
 ### Admin Login
