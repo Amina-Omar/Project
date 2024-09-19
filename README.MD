@@ -85,7 +85,7 @@ Home Page
 ### Dashboard
 ![Screenshot of dashbord](public\assets\Screenshot_20240919-140504.png)
 ### Admin Login
-![Screenshot of admin login](public\assets\Screenshot_20240919-140603.png)
+![Screenshot of admin login](assets/Screenshot_20240919-140603.png)
 
 ### User Registration
 ![Screenshot of user registration](public\assets\Screenshot_20240919-140534.png)
