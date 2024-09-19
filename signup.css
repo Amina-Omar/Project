@@ -26,10 +26,8 @@ header {
 
 .logo img {
     height: 50px;
-    margin-right: 10px;
 }
 
-/* Adjust Menu Button */
 .nav-button {
     background-color: #28A745;
     color: white;
@@ -39,7 +37,7 @@ header {
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease;
-    right: 1in; /* 1 inch from the right */
+    right: 1in; /* Position menu button 1 inch from the right */
 }
 
 .nav-button:hover {
@@ -47,13 +45,12 @@ header {
     transform: translateX(-10px);
 }
 
-/* Navigation Menu Styles */
 .nav-menu {
     display: none;
     background-color: #0047AB;
     position: absolute;
     top: 60px;
-    right: 1in; /* Adjusted for new menu button position */
+    right: 1in;
     width: 200px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -77,30 +74,18 @@ header {
     background-color: #218838;
 }
 
-/* Main Section */
-main {
-    flex: 1;
-    padding: 20px;
-    margin-top: 100px; /* Increased space for fixed header */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* Form Containers for Signup and Login */
-.form-container {
-    width: 400px; /* Set width for forms */
-    margin: 20px auto;
+/* Signup Form Container */
+.signup-container {
+    max-width: 400px;
+    margin: 120px auto; /* Push form below the header */
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: slideIn 0.5s ease-out; /* Animation for form visibility */
-    z-index: 999; /* Keep form above other content */
+    animation: slideIn 0.5s ease-out; /* Form animation */
 }
 
-/* Input Group */
+/* Input Group Styles */
 .input-group {
     margin-bottom: 15px;
 }
@@ -108,11 +93,17 @@ main {
 input[type="text"],
 input[type="password"],
 input[type="email"],
-textarea {
+input[type="tel"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
 }
 
 button {
@@ -120,7 +111,8 @@ button {
     transition: background-color 0.3s ease;
 }
 
-.submit-btn {
+/* Signup Button */
+.signup-btn {
     background-color: #28A745;
     color: white;
     padding: 10px 20px;
@@ -128,9 +120,10 @@ button {
     border-radius: 5px;
     font-size: 18px;
     width: 100%;
+    margin-top: 10px;
 }
 
-.submit-btn:hover {
+.signup-btn:hover {
     background-color: #218838;
 }
 
@@ -139,11 +132,13 @@ footer {
     background-color: #0047AB;
     color: white;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
     width: 100%;
     position: relative;
+    margin-top: auto;
 }
 
+/* Style for red-colored heart with animation */
 footer p .heart {
     color: red;
     font-size: 18px;
@@ -151,7 +146,23 @@ footer p .heart {
     animation: heartbeat 1s infinite;
 }
 
-/* Animation for Login and Signup Containers */
+/* Animation for heart pulsing effect */
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+}
+
+/* Animation for Form Visibility */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -163,17 +174,30 @@ footer p .heart {
     }
 }
 
-/* Ensure footer sticks to bottom */
-body::after {
-    content: "";
-    display: block;
-    height: 60px;
+/* Responsive Design */
+@media (max-width: 600px) {
+    .signup-container {
+        width: 90%;
+        margin: 100px auto;
+    }
+    
+    .nav-button {
+        right: 0.5in;
+    }
+
+    .nav-menu {
+        right: 0.5in;
+    }
 }
 
-/* Fix overlapping header and form */
 @media (max-width: 400px) {
-    .form-container {
-        width: 90%; /* Make form responsive */
+    .signup-container {
+        width: 100%;
+        margin: 100px auto;
+    }
+
+    .nav-button {
+        right: 0;
     }
 
     .nav-menu {
@@ -181,6 +205,3 @@ body::after {
         width: 100%;
     }
 }
-
-
-
